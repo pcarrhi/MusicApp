@@ -1,0 +1,17 @@
+.toolbar {
+    background-color:#101b1c;
+    opacity:0.9;
+    color: white;
+}
+
+
+.right-align {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right:0;
+}
+
+a .text {
+    color: #c4e2e2;
+}

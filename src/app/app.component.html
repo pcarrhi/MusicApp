@@ -1,0 +1,37 @@
+<!-- <div class="hero">
+  
+
+  <div *ngIf="user; else login">
+    This is if there is a user
+    <button (click)="user.logout()">logout</button>
+  </div>
+
+  <div class="loggedout">
+    <ng-template #login>
+      Please login to your MusicMeetup Account.
+      <button (click)="user.login()">Login</button>
+    </ng-template>
+  </div>
+</div> -->
+<app-navbar></app-navbar>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+<!-- <div *ngIf="user.uid | async as uid; else login" class="container">
+  User {{ uid }} is logged in. Ready to start jamming?
+  <div *ngIf="user.isAdmin | async">
+    User {{ uid }} also has ADMIN superpowers..OOH
+  </div>
+  <div><button (click)="logout()">Logout</button></div>
+</div>
+
+<div class="loggedout">
+  <ng-template #login>
+  Please login to your MusicMeetup account.
+  <button (click)="user.login()">Login</button>
+</ng-template> 
+</div> -->

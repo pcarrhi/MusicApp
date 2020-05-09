@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "music-meetup-app": {
+      "hosting": {
+        "musicmeetup-app": [
+          "music-meetup-app"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "musicmeetup-app",
+      "public": "dist/musicmeetup-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
