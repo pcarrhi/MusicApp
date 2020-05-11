@@ -1,7 +1,28 @@
-<p>dashboard works!</p>
 
 
-<div>
 
-    Here is your current thing, {{ user.email}}
+<div class="container">
+
+    <div class="center">
+        <h1>Your MusicMeetup Dashboard</h1>
+
+        
+        <ul style="text-align: center;">
+            <li><mat-icon>add</mat-icon><a [routerLink]="'add-group'">Add a Group</a></li>
+            <li><mat-icon>list</mat-icon><a [routerLink]="'add-group'">View All Your Groups</a></li>
+        </ul>
+
+        <!-- <mat-icon [routerLink]="'add-group'">Add Group</button>
+        <button mat-raised-button color="primary" [routerLink]="'group-list'">View All Groups</button> 
+        <p></p> -->
+        <div>
+        Your user email: {{ user.email}}
+        </div>
+    </div>
+
 </div>
+  
+
+
+<!-- Refers to routing for dashboard and its children -->
+<router-outlet></router-outlet>

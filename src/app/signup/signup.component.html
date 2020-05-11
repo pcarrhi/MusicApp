@@ -1,19 +1,33 @@
 
+
+
 <div class="container">
-    <form [formGroup]="signupForm" (ngSubmit)="register()">
+    <mat-card class="registerCard">
+        <mat-card-content layout-align="center">
+            <mat-card-title class="card-title">Register for an account</mat-card-title>
+    
+            <form [formGroup]="signupForm" (ngSubmit)="register()" class="myForm">
+                <mat-form-field class="fullWidth">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+    
+    
+                <mat-form-field class="fullWidth">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" placeholder="password" formControlName="password">
+                </mat-form-field>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" formControlName="email">
-        </div>
-
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" formControlName="password">
-        </div>
-
-        <button class="btn btn-primary" type="submit">Register Now!</button>
-
-    </form>
-
+                <div class="row">
+                    <button mat-raised-button color="primary" [disabled]="!signupForm.valid">Register Now!</button>
+                </div>
+        
+                <div class="row">
+                    <span>Don't have an account? Log in <a [routerLink]="'../login'"> here</a></span>
+                </div>
+        
+            </form>
+    
+        </mat-card-content>
+    </mat-card>                     
 </div>

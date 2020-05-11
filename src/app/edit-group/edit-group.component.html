@@ -1,0 +1,62 @@
+
+<div class="container">
+
+    <mat-card class="editCard">
+        <mat-card-content layout-align="center">
+            <mat-card-title>Edit Group Details</mat-card-title>
+
+            <form [formGroup]="editForm" (ngSubmit)="updateForm()" class="myForm" novalidate>
+                <!--NAME-->
+                <mat-form-field class="fullWidth">
+                    <mat-label>Group Name</mat-label>
+                    <input matInput placeholder="Group Name" formControlName="groupName" required>
+                </mat-form-field>
+                    <p *ngIf="groupName.touched && groupName.invalid" class="error">
+                    <sup>*</sup>Please enter a group name
+                    </p>
+                    <p *ngIf="groupName.errors?.minlength" class="error">
+                    <sup>*</sup>Minimum 6 characters :)
+                    </p>
+
+                 <!--LOCATION-->   
+                <mat-form-field class="fullWidth">
+                    <mat-label>Group Location</mat-label>
+                    <input matInput placeholder="Location" formControlName="groupLocation">
+                </mat-form-field>
+                    <p *ngIf="groupLocation.invalid && groupLocation.touched" class="error"><sup>*</sup>Where are you going to practice?</p>
+
+
+                <!--Instrument-->
+                <mat-form-field class="fullWidth">
+                    <mat-label>Instrument</mat-label>              
+                    <input matInput placeholder="Instrument(s)" formControlName="groupInstrument" required>
+                </mat-form-field>
+                <p *ngIf="groupInstrument.touched && groupInstrument.invalid" class="error"><sup>*</sup>Let us know what instrument you're playing</p>
+
+
+
+                <!--# MEMBERS-->
+                <mat-form-field class="fullWidth">
+                    <mat-label>Number of Members</mat-label>
+                    <input matInput placeholder="# of Members" formControlName="groupMembers" required>
+                </mat-form-field>
+                <p *ngIf="groupMembers.touched && groupMembers.invalid" class="error">
+                    <sup>*</sup>Please provide # of people in your group
+                </p>
+                <p *ngIf="groupMembers.errors?.pattern" class="error">
+                    <sup>*</sup>Numbers only!
+                </p>
+
+
+                <!--UPDATE-->
+                <button mat-raised-button color="primary" [disabled]="!editForm.valid">
+                    Update Group
+                </button>
+
+        </form>
+
+        </mat-card-content>
+    </mat-card>
+</div>
+          
+

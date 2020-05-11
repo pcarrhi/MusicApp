@@ -1,0 +1,36 @@
+.card-title {
+  display: flex;
+  justify-content: center;
+}
+
+.loginCard {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    top: 50%
+  }
+  
+  .myForm{
+    min-width: 150px;
+    max-width: 500px;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .fullWidth {
+    width: 100%;
+  }
+
+button {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+

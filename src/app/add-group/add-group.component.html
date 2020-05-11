@@ -1,0 +1,50 @@
+
+
+<div class="container">
+  <mat-card class="registerCard">
+    <mat-card-content layout-align="center">
+          <mat-card-title>Create a MusicMeetup group</mat-card-title>
+
+
+          <!-- Group form -->
+            <form [formGroup]="groupForm" (ngSubmit)="onSubmit()" class="myForm" novalidate>
+              
+              <mat-form-field class="fullWidth">
+                <mat-label>Group Name</mat-label>
+                <input matInput placeholder="Your group name" formControlName="groupName" required>
+              </mat-form-field> 
+                <!-- Showing errors using getter method -->
+                  <p *ngIf="groupName.touched && groupName.invalid" class="error"><sup>*</sup>Please enter your group name</p>
+                  <p *ngIf="groupName.errors?.minlength" class="error"><sup>*</sup>Minimum 6 characters please!</p>
+                
+              <mat-form-field class="fullWidth">
+                <mat-label>Location</mat-label>
+                <input matInput placeholder="Choose a location" formControlName="groupLocation">
+              </mat-form-field>
+                  <p *ngIf="groupName.invalid && groupLocation.touched" class="error"><sup>*</sup>Where are you going to practice?</p>
+
+              <mat-form-field class="fullWidth">
+                <mat-label>Type of Instrument</mat-label>
+                <input matInput placeholder="Your instrument(s)" formControlName="groupInstrument" required>
+              </mat-form-field>
+                  <!-- Showing errors using getter method -->
+                  <p *ngIf="groupInstrument.touched && groupInstrument.invalid" class="error"><sup>*</sup>Please provide a location</p>
+
+              <mat-form-field class="fullWidth">
+                  <mat-label>Group Members Total</mat-label>
+                  <input matInput placeholder="# of members in your group" formControlName="groupMembers" required>
+              </mat-form-field>
+                    <!-- Showing errors using getter method -->
+                  <p *ngIf="groupMembers.touched && groupMembers.invalid" class="error"><sup>*</sup>Please provide a group amount</p>
+                  <p *ngIf="groupMembers.errors?.pattern" class="error"><sup>*</sup>Use numbers only</p>
+
+              <button mat-raised-button color="primary" [disabled]="!groupForm.valid">Create Group</button>
+
+            </form>
+
+    </mat-card-content>
+  </mat-card>
+
+
+
+</div>

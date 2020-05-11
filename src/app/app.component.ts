@@ -9,6 +9,8 @@ import { UserService } from '../app/shared/user.service';
 })
 export class AppComponent {
 
+  title = 'MusicMeetup';
+
   constructor(
     public user: UserService) {}
 }

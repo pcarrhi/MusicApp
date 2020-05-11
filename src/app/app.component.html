@@ -1,22 +1,13 @@
-<!-- <div class="hero">
-  
 
-  <div *ngIf="user; else login">
-    This is if there is a user
-    <button (click)="user.logout()">logout</button>
-  </div>
 
-  <div class="loggedout">
-    <ng-template #login>
-      Please login to your MusicMeetup Account.
-      <button (click)="user.login()">Login</button>
-    </ng-template>
-  </div>
-</div> -->
-<app-navbar></app-navbar>
-<div class="content">
-  <router-outlet></router-outlet>
-</div>
+<mat-toolbar class="toolbar">{{ title }}
+  <mat-nav-list class="right-align">
+    <a mat-list-item [routerLink]="''"><span class="text">Home</span></a>
+      <a mat-list-item [routerLink]="'logout'"><span class="text">Logout</span></a>
+  </mat-nav-list>  
+</mat-toolbar>
+<router-outlet></router-outlet>
+
 
 
 
@@ -33,5 +24,4 @@
   <ng-template #login>
   Please login to your MusicMeetup account.
   <button (click)="user.login()">Login</button>
-</ng-template> 
-</div> -->
+</ng-template>  -->

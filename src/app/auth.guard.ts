@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     if(this.afAuth.isLoggedIn !== true) {
-      window.alert('You must log in first.');
+      alert('You must log in first.');
       this.router.navigate(['login']);
     }
     return true;

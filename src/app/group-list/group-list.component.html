@@ -1,0 +1,39 @@
+<div class="table-groups">
+  <div class="header">Your Groups</div>
+
+  <table cellspacing = "0">
+
+    <thead>
+      <tr>
+        <!-- <th scope="col">Group Id</th> -->
+        <th width="230">Group Name</th>
+        <th scope="col">Group Location</th>
+        <th scope="col">Instrument</th>
+        <th scope="col">Group Members</th>
+        <th class="text-center" scope="col">Edit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- *ngFor loop iterates over Student array and fetch the student's data -->
+      <tr *ngFor="let group of Group">
+        <!-- <td>{{group.$key}}</td> -->
+        <th scope="row">{{group.groupName}}</th>
+        <td>{{group.groupLocation}}</td>
+        <td>{{group.groupInstrument}}</td>
+        <td>{{group.groupMembers}}</td>
+        <td class="text-center action-block">
+
+          <!-- routerLink="/edit-student/{{student.$key}}" is refered to { path: 'edit-student/:id', component: EditStudentComponent } in app-routing.moudles.ts -->
+          <a routerLink="../edit-group/{{group.$key}}">Edit</a>
+          <button mat-button color="primary" (click)="deleteGroup(group)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+    </table>
+
+
+</div>
+ 
+

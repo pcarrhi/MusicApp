@@ -1,9 +1,5 @@
-.card-title {
-  display: flex;
-  justify-content: center;
-}
 
-.registerCard {
+.editCard {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -21,15 +17,4 @@
   
   .fullWidth {
     width: 100%;
-  }
-
-  button {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .row {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
   }
